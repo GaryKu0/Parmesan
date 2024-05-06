@@ -11,6 +11,10 @@
 		6F5EEF6E2BE8A0090053068E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EEF6D2BE8A0090053068E /* ContentView.swift */; };
 		6F5EEF702BE8A00A0053068E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EEF6F2BE8A00A0053068E /* Assets.xcassets */; };
 		6F5EEF732BE8A00A0053068E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EEF722BE8A00A0053068E /* Preview Assets.xcassets */; };
+		6F5EEF7B2BE8A11C0053068E /* Panel in Frameworks */ = {isa = PBXBuildFile; productRef = 6F5EEF7A2BE8A11C0053068E /* Panel */; };
+		6F5EEF7D2BE8A13A0053068E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EEF7C2BE8A13A0053068E /* CardView.swift */; };
+		6F5EEF7F2BE8A1620053068E /* PanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EEF7E2BE8A1620053068E /* PanelManager.swift */; };
+		6F5EEF812BE8AA090053068E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EEF802BE8AA090053068E /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		6F5EEF6D2BE8A0090053068E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F5EEF6F2BE8A00A0053068E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F5EEF722BE8A00A0053068E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6F5EEF7C2BE8A13A0053068E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6F5EEF7E2BE8A1620053068E /* PanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelManager.swift; sourceTree = "<group>"; };
+		6F5EEF802BE8AA090053068E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5EEF7B2BE8A11C0053068E /* Panel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,9 @@
 				6F5EEF6D2BE8A0090053068E /* ContentView.swift */,
 				6F5EEF6F2BE8A00A0053068E /* Assets.xcassets */,
 				6F5EEF712BE8A00A0053068E /* Preview Content */,
+				6F5EEF7C2BE8A13A0053068E /* CardView.swift */,
+				6F5EEF7E2BE8A1620053068E /* PanelManager.swift */,
+				6F5EEF802BE8AA090053068E /* Person.swift */,
 			);
 			path = Parmesan;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = Parmesan;
+			packageProductDependencies = (
+				6F5EEF7A2BE8A11C0053068E /* Panel */,
+			);
 			productName = Parmesan;
 			productReference = 6F5EEF682BE8A0090053068E /* Parmesan.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 6F5EEF5F2BE8A0090053068E;
+			packageReferences = (
+				6F5EEF792BE8A11C0053068E /* XCRemoteSwiftPackageReference "Panel" */,
+			);
 			productRefGroup = 6F5EEF692BE8A0090053068E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5EEF812BE8AA090053068E /* Person.swift in Sources */,
+				6F5EEF7F2BE8A1620053068E /* PanelManager.swift in Sources */,
 				6F5EEF6E2BE8A0090053068E /* ContentView.swift in Sources */,
+				6F5EEF7D2BE8A13A0053068E /* CardView.swift in Sources */,
 				6F5EEF6C2BE8A0090053068E /* ParmesanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6F5EEF792BE8A11C0053068E /* XCRemoteSwiftPackageReference "Panel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reddavis/Panel.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6F5EEF7A2BE8A11C0053068E /* Panel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F5EEF792BE8A11C0053068E /* XCRemoteSwiftPackageReference "Panel" */;
+			productName = Panel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6F5EEF602BE8A0090053068E /* Project object */;
 }

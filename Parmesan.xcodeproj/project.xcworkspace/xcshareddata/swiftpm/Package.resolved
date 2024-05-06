@@ -1,0 +1,15 @@
+{
+  "originHash" : "7f2aa21a9ceb73639b13d2ceb8b2484a7e44e71f4f468010548434f47fb2dda4",
+  "pins" : [
+    {
+      "identity" : "panel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/reddavis/Panel.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bfe901a469173830df9bbd2660169626760c7eea"
+      }
+    }
+  ],
+  "version" : 3
+}
