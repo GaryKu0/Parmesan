@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct RegisterResponse: Codable {
+    let user: User
+}
+
+struct LoginResponse: Codable {
+    let token: String
+}

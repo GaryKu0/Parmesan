@@ -1,24 +1,29 @@
 import SwiftUI
 import Panel
 
+
 enum PanelItem: String, Identifiable {
     case matched
     var id: String { self.rawValue }
 }
 
 struct ContentView: View {
-    @State private var people: [Person] = [ // 使用 Person 結構
+    @State private var people: [Person] = [
         Person(name: "John", age: 30, city: "New York"),
         Person(name: "Emily", age: 25, city: "Los Angeles"),
         Person(name: "Max", age: 35, city: "Chicago"),
         Person(name: "Luca", age: 29, city: "Miami"),
         Person(name: "Sean", age: 27, city: "San Francisco"),
-        Person(name: "寶寶", age: 2, city: "台北")
+        Person(name: "寶寶", age: 2, city: "台北"),
     ].reversed()
     
     @StateObject private var panelManager = PanelManager()
     @State private var selectedItem: PanelItem? = nil
     
+    @State private var showingAuth = false
+    @State private var isLoggedIn = false
+    @State private var user: User? // 存储用户信息
+
     var body: some View {
         VStack {
             HStack {
@@ -26,15 +31,25 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .bold()
                 Spacer()
-                Image("capybara")
-                    .resizable()
-                    .frame(maxWidth: 50, maxHeight: 50)
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(50)
+                Button(action: {
+                    if isLoggedIn {
+                        // 用户已登录，跳转到用户信息页面
+                        print("跳转到用户信息页面") // 您需要添加用户信息页面实现
+                    } else {
+                        // 用户未登录，显示登录/注册页面
+                        showingAuth = true
+                    }
+                }) {
+                    Image("capybara")
+                        .resizable()
+                        .frame(maxWidth: 50, maxHeight: 50)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(50)
+                }
             }
             .padding(.horizontal)
             .frame(maxHeight: 100)
-            
+
             Spacer()
             Button("Print People Array") {
                 print("Current People Array: \(people)")
@@ -89,6 +104,9 @@ struct ContentView: View {
                     }
                 })
         .environmentObject(panelManager)
+        .sheet(isPresented: $showingAuth) {
+            AuthView(showingAuth: $showingAuth, isLoggedIn: $isLoggedIn, user: $user)
+        }
     }
     
     func likeTopCard() {
@@ -137,6 +155,6 @@ struct MatchedView: View {
     }
 }
 
-#Preview {
+#Preview{
     ContentView()
 }

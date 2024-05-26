@@ -15,6 +15,11 @@
 		6F5EEF7D2BE8A13A0053068E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EEF7C2BE8A13A0053068E /* CardView.swift */; };
 		6F5EEF7F2BE8A1620053068E /* PanelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EEF7E2BE8A1620053068E /* PanelManager.swift */; };
 		6F5EEF812BE8AA090053068E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EEF802BE8AA090053068E /* Person.swift */; };
+		6FD8C16E2C0368A3006992A5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8C16D2C0368A3006992A5 /* Model.swift */; };
+		6FD8C1702C0368B5006992A5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8C16F2C0368B5006992A5 /* Response.swift */; };
+		6FD8C1722C036B40006992A5 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8C1712C036B40006992A5 /* APIConfig.swift */; };
+		6FD8C1742C036B57006992A5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8C1732C036B57006992A5 /* APIService.swift */; };
+		6FD8C1762C036B6F006992A5 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8C1752C036B6F006992A5 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		6F5EEF7C2BE8A13A0053068E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6F5EEF7E2BE8A1620053068E /* PanelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelManager.swift; sourceTree = "<group>"; };
 		6F5EEF802BE8AA090053068E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6FD8C16D2C0368A3006992A5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6FD8C16F2C0368B5006992A5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		6FD8C1712C036B40006992A5 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		6FD8C1732C036B57006992A5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		6FD8C1752C036B6F006992A5 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,11 @@
 				6F5EEF7C2BE8A13A0053068E /* CardView.swift */,
 				6F5EEF7E2BE8A1620053068E /* PanelManager.swift */,
 				6F5EEF802BE8AA090053068E /* Person.swift */,
+				6FD8C16D2C0368A3006992A5 /* Model.swift */,
+				6FD8C16F2C0368B5006992A5 /* Response.swift */,
+				6FD8C1712C036B40006992A5 /* APIConfig.swift */,
+				6FD8C1732C036B57006992A5 /* APIService.swift */,
+				6FD8C1752C036B6F006992A5 /* AuthView.swift */,
 			);
 			path = Parmesan;
 			sourceTree = "<group>";
@@ -156,9 +171,14 @@
 			files = (
 				6F5EEF812BE8AA090053068E /* Person.swift in Sources */,
 				6F5EEF7F2BE8A1620053068E /* PanelManager.swift in Sources */,
+				6FD8C1722C036B40006992A5 /* APIConfig.swift in Sources */,
 				6F5EEF6E2BE8A0090053068E /* ContentView.swift in Sources */,
+				6FD8C16E2C0368A3006992A5 /* Model.swift in Sources */,
 				6F5EEF7D2BE8A13A0053068E /* CardView.swift in Sources */,
+				6FD8C1762C036B6F006992A5 /* AuthView.swift in Sources */,
 				6F5EEF6C2BE8A0090053068E /* ParmesanApp.swift in Sources */,
+				6FD8C1742C036B57006992A5 /* APIService.swift in Sources */,
+				6FD8C1702C0368B5006992A5 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

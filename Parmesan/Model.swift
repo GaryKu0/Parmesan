@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+struct User: Codable {
+    let id: Int
+    let name: String
+    let email: String
+    let updated_at: String
+    let created_at: String
+    let user_detail: [UserDetail]?
+}
+
+struct UserDetail: Codable {
+    let id: Int
+    let user_id: String
+    let type: String
+    let content: String
+    let created_at: String
+    let updated_at: String
+}
