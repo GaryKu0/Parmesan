@@ -17,7 +17,9 @@ struct AuthView: View {
     @State private var errorMessage = ""
     @State private var showNameInput = false // 控制是否显示用户名输入框
     @State private var showNextButton = false // 控制是否显示下一步按钮
+    var refreshPeople: () -> Void // 添加 refreshPeople 函数作为参数
 
+    
     var body: some View {
         VStack {
             Image("capybara")
@@ -25,7 +27,7 @@ struct AuthView: View {
                 .frame(maxWidth: 100, maxHeight: 100)
                 .cornerRadius(24)
                 .padding(.bottom, 24)
-            Text("Parnesan Cheese")
+            Text("Parmesan Cheese")
                 .font(.title)
                 .bold()
             if showNameInput { // 只有在 showNameInput 为 true 时显示用户名输入框
@@ -125,7 +127,11 @@ struct AuthView: View {
         print("Login successful! Token: \(response.token)")
         showingAuth = false
         isLoggedIn = true
-        try await fetchUserInfo(token: response.token)
+        if let token = response.token {
+            try await fetchUserInfo(token: token)
+        }
+        print("login. now perform refresh people")
+        refreshPeople()
     }
 
     func fetchUserInfo(token: String) async throws {

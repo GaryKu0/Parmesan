@@ -8,8 +8,11 @@
 import Foundation
 
 struct APIConfig {
-    static let baseURL = "https://lumen1.nkust.treexhd.me/dev" // 修改为您的 API 地址
+    static let baseURL = "https://laravel.nkust.treexhd.me/dev"
     static let registerEndpoint = "/register"
     static let loginEndpoint = "/login"
     static let userInfoEndpoint = "/user/info"
+    static let otherUserInfoEndpoint = "/user/info/"
+    static let waterfallEndpoint = "/match/waterfall"
+    static let likeUser="/match/like"
 }

@@ -12,5 +12,5 @@ struct RegisterResponse: Codable {
 }
 
 struct LoginResponse: Codable {
-    let token: String
+    let token: String?
 }

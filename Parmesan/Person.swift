@@ -7,8 +7,19 @@
 
 import Foundation
 
-struct Person {
+//struct Person {
+//    let name: String
+//    let age: Int
+//    let city: String
+//}
+
+struct Person: Decodable, Identifiable {
+    let id: Int
     let name: String
-    let age: Int
-    let city: String
+    let email: String
+    let lat: String
+    let lng: String
+    let distance: Double
+    var UserProfilePhoto: String?
 }
+
