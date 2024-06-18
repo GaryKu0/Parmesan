@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var isLoggedIn = false
     @State private var user: User? // 存储用户信息
     @State private var showingChatList = false // 顯示聊天列表
+    
 
     @State private var people: [Person] = []
     @State private var isLoadingPeople = false
@@ -129,7 +130,7 @@ struct ContentView: View {
                     Button(action: {
                         showingChatList = true
                     }) {
-                        Image(systemName: "bubble.left.and.bubble.right.fill")
+                        Image(systemName: "message.badge.circle.fill")
                             .resizable()
                             .frame(width: 40, height: 40)
                             .foregroundColor(.blue)
