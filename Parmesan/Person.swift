@@ -21,5 +21,6 @@ struct Person: Decodable, Identifiable {
     let lng: String
     let distance: Double
     var UserProfilePhoto: String?
+    var images: [String]? // 新增的圖片數組
 }
 

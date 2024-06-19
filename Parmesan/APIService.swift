@@ -244,10 +244,16 @@ class APIService {
                 
                 for tempPerson in people {
                     var userProfilePhoto: String? = nil
+                    var images: [String] = []
                     
                     if let userDetail = tempPerson.user_detail {
-                        if let img1Detail = userDetail.first(where: { $0.type == "img1" }) {
-                            userProfilePhoto = img1Detail.content
+                        for i in 1...9 {
+                            if let imgDetail = userDetail.first(where: { $0.type == "img\(i)" }) {
+                                images.append(imgDetail.content)
+                                if i == 1 {
+                                    userProfilePhoto = imgDetail.content
+                                }
+                            }
                         }
                     }
                     
@@ -258,7 +264,8 @@ class APIService {
                         lat: tempPerson.lat,
                         lng: tempPerson.lng,
                         distance: tempPerson.distance,
-                        UserProfilePhoto: userProfilePhoto
+                        UserProfilePhoto: userProfilePhoto,
+                        images: images.isEmpty ? nil : images
                     )
                     
                     result.append(person)
@@ -272,7 +279,6 @@ class APIService {
             }
         }.resume()
     }
-
 
 
 
